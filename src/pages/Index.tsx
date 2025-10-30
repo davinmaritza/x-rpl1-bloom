@@ -1,10 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
         <Hero />
@@ -13,13 +11,10 @@ const Index = () => {
         <section id="about" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-              <h2 className="font-display text-3xl md:text-4xl font-bold">
+              <h2 className="font-display text-3xl md:text-3xl font-semibold">
                 Tentang <span className="gradient-text">X RPL 1</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Kelas X RPL 1 adalah kelas yang terdiri dari siswa-siswi berbakat di bidang Rekayasa Perangkat Lunak.
-                Kami berkomitmen untuk terus belajar, berkembang, dan menciptakan karya-karya inovatif di dunia teknologi.
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">Class X RPL 1 is a class consisting of talented students in the field of Software Engineering. We are committed to continuous learning, development, and creation of innovative works in the world of technology.</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 card-hover">
                   <h3 className="font-display text-2xl font-bold text-primary mb-2">36</h3>
@@ -50,10 +45,7 @@ const Index = () => {
               </p>
             </div>
             <div className="text-center">
-              <a
-                href="/galeri"
-                className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-glow transition-all duration-300 hover:scale-105"
-              >
+              <a href="/galeri" className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-glow transition-all duration-300 hover:scale-105">
                 Lihat Semua Foto
               </a>
             </div>
@@ -61,8 +53,6 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
