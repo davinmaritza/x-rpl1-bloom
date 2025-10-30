@@ -8,49 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern color palette inspired by Squarespace */
-    --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    /* Dark modern color palette inspired by Squarespace */
+    --background: 220 20% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card: 220 20% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary: Modern blue/indigo */
-    --primary: 221 83% 53%;
+    /* Primary: Vibrant blue accent */
+    --primary: 210 100% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 221 83% 65%;
+    --primary-glow: 210 100% 70%;
 
-    /* Secondary: Elegant accent */
-    --secondary: 280 60% 60%;
+    /* Secondary: Coral accent */
+    --secondary: 15 85% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 15% 40%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 70%;
 
-    --accent: 221 83% 53%;
+    --accent: 280 60% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 221 83% 53%;
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 210 100% 60%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(280 60% 60%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 15% 97%));
-    --gradient-subtle: linear-gradient(135deg, hsl(220 15% 98%), hsl(221 83% 98%));
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 60%), hsl(280 60% 60%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 8% / 0.7), hsl(220 20% 5% / 0.9));
+    --gradient-subtle: linear-gradient(135deg, hsl(220 20% 12%), hsl(220 20% 8%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 85% 65%), hsl(280 60% 60%));
     
-    --shadow-sm: 0 2px 8px hsl(220 20% 10% / 0.04);
-    --shadow-md: 0 4px 16px hsl(220 20% 10% / 0.08);
-    --shadow-lg: 0 8px 32px hsl(220 20% 10% / 0.12);
-    --shadow-glow: 0 0 40px hsl(221 83% 53% / 0.3);
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(210 100% 60% / 0.4);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);

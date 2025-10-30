@@ -2,12 +2,12 @@ import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted border-t">
+    <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Class Info */}
           <div className="text-center md:text-left">
-            <h3 className="font-display font-bold text-lg">X RPL 1</h3>
+            <h3 className="font-display font-bold text-lg text-foreground">X RPL 1</h3>
             <p className="text-sm text-muted-foreground">SMK Negeri 13 Bandung</p>
           </div>
 

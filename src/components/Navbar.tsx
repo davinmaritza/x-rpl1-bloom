@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,22 +10,24 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Struktur", path: "/struktur" },
-    { name: "Piket", path: "/piket" },
-    { name: "Galeri", path: "/galeri" },
+    { name: "Structure", path: "/struktur" },
+    { name: "Schedule", path: "/piket" },
+    { name: "Gallery", path: "/galeri" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo and Class Name */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-white font-bold text-lg">13</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="SMKN 13 Bandung" 
+              className="w-12 h-12 object-contain group-hover:scale-110 transition-transform"
+            />
             <div className="hidden sm:block">
               <p className="font-display font-bold text-lg text-foreground">X RPL 1</p>
               <p className="text-xs text-muted-foreground">SMK Negeri 13 Bandung</p>

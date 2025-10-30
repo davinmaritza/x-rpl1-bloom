@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowDown } from "lucide-react";
+import classPhoto from "@/assets/class-photo.jpg";
 
 const Hero = () => {
   const { data: homeContent } = useQuery({
@@ -18,15 +19,25 @@ const Hero = () => {
   });
 
   const content = homeContent?.content as { title?: string; subtitle?: string } | null;
-  const title = content?.title || "Selamat Datang Di Website X RPL 1 SMK Negeri 13 Bandung";
-  const subtitle = content?.subtitle || "Kelas Terbaik di SMK Negeri 13 Bandung";
+  const title = content?.title || "Welcome to X RPL 1 SMK Negeri 13 Bandung";
+  const subtitle = content?.subtitle || "The Best Class in SMK Negeri 13 Bandung";
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={classPhoto} 
+          alt="Class X RPL 1" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 hero-gradient"></div>
+      </div>
+      
+      {/* Animated accent elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -47,13 +58,13 @@ const Hero = () => {
               href="#about"
               className="group px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
-              Tentang Kami
+              About Us
             </a>
             <a
               href="#gallery"
-              className="group px-8 py-4 bg-white border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
+              className="group px-8 py-4 bg-muted/50 backdrop-blur-sm border-2 border-foreground/20 text-foreground rounded-full font-medium hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 hover:scale-105"
             >
-              Lihat Galeri
+              View Gallery
             </a>
           </div>
         </div>
